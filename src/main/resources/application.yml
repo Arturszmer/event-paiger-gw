@@ -1,27 +1,5 @@
-server:
-  port: 8222
-
 spring:
   application:
     name: eventpaigergateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: eventpaigerusers
-          uri: http://localhost:31002
-          predicates:
-            - Path=/api/auth/**
-        - id: eventpaigerevents
-          uri: http://localhost:32002
-          predicates:
-            - Path=/api/v1/events/**
   config:
     import: optional:configserver:http://localhost:8888
-eureka:
-  client:
-    register-with-eureka: false
-    service-url:
-      defaultZone: http://localhost:30002/eureka
