@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - uses: actions/setup-java@v3
+    - uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -64,5 +64,5 @@ jobs:
         script: |
           cd /var/www/event-paiger/event-paiger-gateway
           tar -xzvf deploy.tar.gz
-          docker build -t event-paiger-config-image . 
+          docker build -t event-paiger-gateway-image . 
           docker compose up -d
