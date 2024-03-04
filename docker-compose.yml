@@ -1,0 +1,12 @@
+services:
+  event-paiger-app:
+    container_name: event-paiger-gateway
+    image: event-paiger-gateway-image
+    ports:
+      - "40482:8222"
+    networks:
+      - event-paiger-network
+
+networks:
+  event-paiger-network:
+    driver: bridge
