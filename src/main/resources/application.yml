@@ -8,10 +8,10 @@ spring:
     gateway:
       routes:
         - id: eventpaigerusers
-          uri: http://event-paiger-events:31002
+          uri: http://event-paiger-app:31002
           predicates:
             - Path=/api/auth/**
         - id: eventpaigerevents
-          uri: http://event-container-users:32002
+          uri: http://event-container-app:32002
           predicates:
             - Path=/api/v1/events/**
