@@ -12,7 +12,7 @@ spring:
           predicates:
             - Path=/eventpaigerusers/api/auth/**,/api/v1/**
         - id: eventpaigerevents
-          uri: http://event-container-events:32002
+          uri: http://event-paiger-events:32002
           predicates:
             - Path=/eventpaigerevents/api/v1/events/**
 
