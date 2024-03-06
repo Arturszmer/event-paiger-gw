@@ -10,8 +10,10 @@ spring:
         - id: eventpaigerusers
           uri: http://event-paiger-users:31002
           predicates:
-            - Path=/api/auth/**,/api/v1/**
+            - Path=/eventpaigerusers/api/auth/**,/api/v1/**
         - id: eventpaigerevents
           uri: http://event-container-events:32002
           predicates:
-            - Path=/api/v1/events/**
+            - Path=/eventpaigerevents/api/v1/events/**
+
+
