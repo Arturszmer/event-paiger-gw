@@ -19,6 +19,13 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+
+    - name: Create RSA key files
+      run: |
+        echo "${{ secrets.RSA_PUBLIC_KEY }}" > public.pem
+        ls -l  
+        mkdir src/main/resources/certs
+        mv public.pem src/main/resources/certs
         
     - name: Build with Maven
       run: mvn clean package
