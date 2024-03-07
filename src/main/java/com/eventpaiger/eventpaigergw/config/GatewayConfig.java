@@ -1,4 +1,4 @@
-package com.eventpaiger.eventpaigergw.configuration;
+package com.eventpaiger.eventpaigergw.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.route.RouteLocator;
